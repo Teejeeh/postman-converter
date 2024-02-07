@@ -1,0 +1,18 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "projects": {
+    "mock": {
+      "type": "library",
+      "root": "libs/mock",
+      "entryFile": "index",
+      "sourceRoot": "libs/mock/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/mock/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true
+  }
+}
