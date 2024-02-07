@@ -16,7 +16,6 @@ export class ExporterService {
         // Remove export folder
         await rm("export_folder", { recursive: true, force: true });
 
-        console.log(requests)
         requests.forEach((request: TestFile) => {
             const folders = request.folders.join("/").toLocaleLowerCase();
             mkdirSync(`${export_folder}/${folders}`, { recursive: true });

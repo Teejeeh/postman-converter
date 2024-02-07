@@ -11,7 +11,7 @@ export class RequestRepository {
 
 
     public async fetch(): Promise<TestFile[]> {
-        const postman_collection = readFileSync(this.configService.get<string>('postman_collection'), "utf8");
+        const postman_collection = this.configService.get<string>('postman_collection');
 
         const data = JSON.parse(readFileSync(postman_collection, "utf8"));
 
